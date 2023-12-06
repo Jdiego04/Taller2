@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///D:/Documents/GitHub/PDS/SpringCloud-Config
+  security:
+    user:
+      name: ${CONFIG_NAME}
+      password: ${CONFIG_PASSWORD}
+
