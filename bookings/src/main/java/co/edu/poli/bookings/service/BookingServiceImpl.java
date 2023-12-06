@@ -60,7 +60,7 @@ public class BookingServiceImpl implements BookingService {
     }
 
     public User findByIDUser(ModelMapper modelMapper, Long id){
-        return cbFactory.create("findByIDCustomer")
+        return cbFactory.create("findByIDUser")
                 .run(()->modelMapper.map(userClient.findById(id).getData(),User.class),
                         e-> new User()  );
     }
